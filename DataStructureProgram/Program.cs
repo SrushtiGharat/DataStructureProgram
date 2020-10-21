@@ -9,8 +9,8 @@ namespace DataStructureProgram
             Console.WriteLine("Welcome To Data Structure Program");
             LinkedList list = new LinkedList();
             list.AddNode(70);
-            list.AddNode(30);
             list.AddNode(56);
+            list.InsertAtPosition(30, 2);
 
             Console.WriteLine("Linked List :");
             list.Display();

@@ -40,6 +40,23 @@ namespace DataStructureProgram
             }
         }
 
+        public void InsertAtPosition(int data,int position)
+        {
+            Node node = new Node(data);
+            if(this.head == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            Node temp = head;
+            for(int i = 1; i < position-1; i++)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+
+        }
         public void Display()
         {
             if (this.head == null)
