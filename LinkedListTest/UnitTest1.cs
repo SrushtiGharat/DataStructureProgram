@@ -18,5 +18,16 @@ namespace LinkedListTest
 
             Assert.AreEqual(56, list.head.data);
         }
+        [TestMethod]
+        public void GivenThreeNumbers_When_Appended_ShouldBeAddedToLast()
+        {
+            LinkedList list = new LinkedList();
+
+            list.AppendNode(56);
+            list.AppendNode(30);
+            list.AppendNode(70);
+
+            Assert.AreEqual(56, list.head.data);
+        }
     }
 }
