@@ -69,6 +69,27 @@ namespace DataStructureProgram
             temp.next = null;
             return head;
         }
+
+        public Node RemoveLastElement()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("List is empty");
+                return null;
+            }
+            if(this.head.next == null)
+            {
+                Console.WriteLine("List Only Has One Element");
+                return null;
+            }
+            Node temp = this.head;
+            while(temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return temp;
+        }
         public void Display()
         {
             if (this.head == null)

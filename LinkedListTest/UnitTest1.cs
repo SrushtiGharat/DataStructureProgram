@@ -53,5 +53,18 @@ namespace LinkedListTest
 
             Assert.AreEqual(30, head.data);
         }
+        [TestMethod]
+        public void GivenThreeNumbers_WhenDeleteLastNumber_ShouldReturn_RequiredResult()
+        {
+            LinkedList list = new LinkedList();
+
+            list.AppendNode(56);
+            list.AppendNode(30);
+            list.AppendNode(70);
+
+            Node last = list.RemoveLastElement();
+
+            Assert.AreEqual(30, last.data);
+        }
     }
 }

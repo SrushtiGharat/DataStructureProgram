@@ -13,7 +13,7 @@ namespace DataStructureProgram
 
             list.InsertAtPosition(30, 2);
 
-            list.RemoveFirstElement();
+            list.RemoveLastElement();
             
             Console.WriteLine("Linked List :");
             list.Display();
