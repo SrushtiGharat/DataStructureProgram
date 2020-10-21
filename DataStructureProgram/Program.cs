@@ -10,8 +10,11 @@ namespace DataStructureProgram
             LinkedList list = new LinkedList();
             list.AddNode(70);
             list.AddNode(56);
+
             list.InsertAtPosition(30, 2);
 
+            list.RemoveFirstElement();
+            
             Console.WriteLine("Linked List :");
             list.Display();
 
