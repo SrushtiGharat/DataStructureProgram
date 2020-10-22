@@ -14,6 +14,17 @@ namespace StackUsingLinkedList
 
             Console.WriteLine("Stack :");
             stack.Display();
+
+            stack.Pop();
+            Console.WriteLine("\n");
+            Console.WriteLine("Stack :");
+            stack.Display();
+
+            Console.WriteLine("\n");
+            stack.Peep();
+            
+
+
         }
     }
 }

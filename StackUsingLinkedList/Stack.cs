@@ -22,6 +22,25 @@ namespace StackUsingLinkedList
                 top = temp;
             }
         }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Node temp = this.top;
+            top = top.next;
+            
+        }
+        public void Peep()
+        {
+            if(top == null)
+            {
+                Console.WriteLine("Stack is null");
+            }
+            Console.WriteLine("Peep :" + top.data);
+        }
         public void Display()
         {
             if (this.top == null)
