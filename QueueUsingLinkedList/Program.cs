@@ -14,6 +14,10 @@ namespace QueueUsingLinkedList
 
             Console.WriteLine("Queue :");
             queue.Display();
+
+            queue.Dequeue();
+            Console.WriteLine("Queue after dequeue:");
+            queue.Display();
         }
     }
 }

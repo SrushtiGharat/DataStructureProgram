@@ -24,7 +24,18 @@ namespace QueueUsingLinkedList
                 temp.next = node;
             }
         }
-
+        public void Dequeue()
+        {
+            if (this.front == null)
+            {
+                Console.WriteLine("Queue is empty");
+                
+            }
+            Node temp = this.front;
+            front = front.next;
+            temp.next = null;
+            
+        }
         public void Display()
         {
             if (this.front == null)
