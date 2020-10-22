@@ -88,7 +88,7 @@ namespace DataStructureProgram
             }
             if(this.head.next == null)
             {
-                Console.WriteLine("List Only Has One Element");
+                Console.WriteLine("List Only Has One Node");
                 return null;
             }
             Node temp = this.head;
@@ -124,7 +124,7 @@ namespace DataStructureProgram
             int position = SearchList(dataToSearch);
             if(position == 0)
             {
-                Console.WriteLine("No such element found");
+                Console.WriteLine("No such node found");
                 return;
             }
             Node node = new Node(data);
@@ -142,10 +142,16 @@ namespace DataStructureProgram
             int position = SearchList(data);
             if (position == 0)
             {
-                Console.WriteLine("No such element found");
+                Console.WriteLine("No such node found");
+                return;
+            }
+            if(position == 1)
+            {
+                head = head.next;
                 return;
             }
             Node temp = head;
+            
             for (int i = 1;i < position-1; i++)
             {
                 temp = temp.next;
