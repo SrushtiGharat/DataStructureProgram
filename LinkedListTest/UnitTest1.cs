@@ -94,5 +94,19 @@ namespace LinkedListTest
 
             Assert.AreEqual(3, position);
         }
+        public void GivenThreeNumbers_Delete40_ShouldReturn_RequiredResult()
+        {
+            LinkedList list = new LinkedList();
+
+            list.AppendNode(56);
+            list.AppendNode(30);
+            list.AppendNode(70);
+
+            list.InsertUsingSearch(40, 30);
+            list.DeleteANode(40);
+            int size = list.size();
+
+            Assert.AreEqual(3, size);
+        }
     }
 }

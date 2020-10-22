@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace DataStructureProgram
 {
@@ -14,7 +15,12 @@ namespace DataStructureProgram
             list.InsertAtPosition(30, 2);
 
             list.InsertUsingSearch(40,56);
-            
+            list.DeleteANode(40);
+
+            int size = list.size();
+
+            Console.WriteLine("Size Of Linked List :" + size);
+
             Console.WriteLine("Linked List :");
             list.Display();
 
