@@ -108,5 +108,17 @@ namespace LinkedListTest
 
             Assert.AreEqual(3, size);
         }
+        [TestMethod]
+        public void GivenNumbers_WhenAdded_ShouldBeInAscendingOrder()
+        {
+            SortedLinkedList list = new SortedLinkedList();
+
+            list.AddElement(56);
+            list.AddElement(30);
+            list.AddElement(40);
+            list.AddElement(70);
+
+            Assert.AreEqual(30, list.head.data);
+        }
     }
 }
