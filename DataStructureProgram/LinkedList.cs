@@ -48,12 +48,21 @@ namespace DataStructureProgram
                 Console.WriteLine("List is empty");
             }
             Node temp = head;
-            for(int i = 1; i < position-1; i++)
+            if (position == 1)
             {
-                temp = temp.next;
+                temp = node;
+                temp.next = head;
+                head = node;
             }
-            node.next = temp.next;
-            temp.next = node;
+            else
+            {
+                for (int i = 1; i < position - 1; i++)
+                {
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
             
         }
 
@@ -109,6 +118,24 @@ namespace DataStructureProgram
                 count++;
             }
             return 0;
+        }
+        public void InsertUsingSearch(int data,int dataToSearch)
+        {
+            int position = SearchList(dataToSearch);
+            if(position == 0)
+            {
+                Console.WriteLine("No such element found");
+                return;
+            }
+            Node node = new Node(data);
+            Node temp = this.head;
+            for(int i = 1; i < position; i++)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+            
         }
         public void Display()
         {
