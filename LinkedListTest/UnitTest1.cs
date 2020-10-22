@@ -66,5 +66,19 @@ namespace LinkedListTest
 
             Assert.AreEqual(30, last.data);
         }
+
+        [TestMethod]
+        public void GivenThreeNumbers_SearchNumber30_ShouldReturn_Position()
+        {
+            LinkedList list = new LinkedList();
+
+            list.AppendNode(56);
+            list.AppendNode(30);
+            list.AppendNode(70);
+
+            int position = list.SearchList(30);
+
+            Assert.AreEqual(2, position);
+        }
     }
 }

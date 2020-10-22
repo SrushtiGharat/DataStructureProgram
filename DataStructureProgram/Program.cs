@@ -12,11 +12,23 @@ namespace DataStructureProgram
             list.AddNode(56);
 
             list.InsertAtPosition(30, 2);
-
-            list.RemoveLastElement();
             
             Console.WriteLine("Linked List :");
             list.Display();
+
+            Console.WriteLine("\n");
+            Console.WriteLine("Enter the element to be searched");
+            int data = Convert.ToInt32(Console.ReadLine());
+
+            int position = list.SearchList(data);
+            if(position == 0)
+            {
+                Console.WriteLine("No such element found");
+            }
+            else
+            {
+                Console.WriteLine("Element found at position " + position);
+            }
 
         }
     }
