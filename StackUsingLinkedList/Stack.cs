@@ -41,6 +41,21 @@ namespace StackUsingLinkedList
             }
             Console.WriteLine("Peep :" + top.data);
         }
+        public void size()
+        {
+            int count = 0;
+            Node temp = top;
+            if (temp == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("Size :" + count);
+        }
         public void Display()
         {
             if (this.top == null)
@@ -56,6 +71,7 @@ namespace StackUsingLinkedList
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
+                Console.WriteLine("\n");
             }
         }
     }

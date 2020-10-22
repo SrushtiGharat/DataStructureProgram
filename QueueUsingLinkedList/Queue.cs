@@ -36,6 +36,21 @@ namespace QueueUsingLinkedList
             temp.next = null;
             
         }
+        public void size()
+        {
+            int count = 0;
+            Node temp = front;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("Size :"+count);
+        }
         public void Display()
         {
             if (this.front == null)

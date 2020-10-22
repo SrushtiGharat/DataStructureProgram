@@ -14,13 +14,14 @@ namespace StackUsingLinkedList
 
             Console.WriteLine("Stack :");
             stack.Display();
+            stack.size();
 
             stack.Pop();
-            Console.WriteLine("\n");
+
             Console.WriteLine("Stack :");
             stack.Display();
+            stack.size();
 
-            Console.WriteLine("\n");
             stack.Peep();
             
 
